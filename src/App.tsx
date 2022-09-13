@@ -1,5 +1,15 @@
+import { useEffect, useState } from 'react';
+import { Outlet } from 'react-router-dom';
+
+import Navbar from './components/Navbar';
+
 const App = () => {
-  return <h1>teste</h1>;
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+    </>
+  );
 };
 
 export default App;

@@ -1,0 +1,14 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+.navbar a {
+  padding: 0.5rem;
+  line-height: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+}
