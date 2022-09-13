@@ -12,17 +12,16 @@ import PlaylistPage from './pages/PLaylistPage';
 import { store } from './store';
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>
   <Provider store={store}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
+          <Route path="" element={<MoviePage />} />
           <Route path="movie" element={<MoviePage />} />
           <Route path="movie/:movieId" element={<MovieDetailsPage />} />
           <Route path="todo" element={<TodoList />} />
           <Route path="playlist" element={<PlaylistPage />} />
+          <Route path="*" element={<MoviePage />} />
         </Route>
       </Routes>
     </BrowserRouter>

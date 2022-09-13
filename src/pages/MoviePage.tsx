@@ -1,28 +1,20 @@
 import { useEffect, useState } from 'react';
 
 import CardMovie from '../components/CardMovie';
-import { MoviesService } from '../services/MovieService';
+import { useMovies } from '../hooks/useMovie';
 import { IMovie } from '../services/MoviesModels';
 
 const MoviePage = () => {
-  const [movies, setMovies] = useState<IMovie[]>([]);
+  const movies = useMovies();
 
-  useEffect(() => {
-    MoviesService.getPopularMovies().then((response) => {
-      setMovies(response.data.results);
-    });
-  }, []);
   return (
     <>
-      <div>
-        <h1>Movie</h1>
-
-        <ul className="card-grid">
-          {movies.map((m: IMovie) => (
-            <CardMovie key={m.id} movie={m} />
-          ))}
-        </ul>
-      </div>
+      <h1>Movie</h1>
+      <ul className="card-grid">
+        {movies.map((m: IMovie) => (
+          <CardMovie key={m.id} movie={m} />
+        ))}
+      </ul>
     </>
   );
 };

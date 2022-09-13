@@ -14,19 +14,13 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div>
-          <Link to="/">Home</Link>
+          <Link to="movie">Movies EX2</Link>
         </div>
         <div>
-          <Link to="movie">Movies ex-II</Link>
+          <Link to="todo">TodoList EX3</Link>
         </div>
         <div>
-          <Link to="todo">TODO ex-III</Link>
-        </div>
-        <div>
-          <Link to="movie/610150">REDUX ex-IV</Link>
-        </div>
-        <div>
-          <Link to="/playlist">Playlist</Link>
+          <Link to="/playlist">Playlist EX4</Link>
           <small> {numberOfMoviesInPlaylist.length} </small>
         </div>
       </nav>
