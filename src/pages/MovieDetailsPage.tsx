@@ -9,7 +9,7 @@ const MovieDetailsPage = () => {
   let id = params.movieId || "";
 
   console.log(id);
-  const [movie, setMovie] = useState<IMovie>({});
+  const [movie, setMovie] = useState<IMovie>();
 
   useEffect(() => {
     MoviesService.getMoviesDetails(id).then((response) => {
@@ -18,7 +18,7 @@ const MovieDetailsPage = () => {
   }, []);
 
   const urlImg =
-    "https://image.tmdb.org/t/p/w220_and_h330_face/" + movie.poster_path;
+    "https://image.tmdb.org/t/p/w220_and_h330_face/" + movie?.poster_path;
 
   return (
     <>
@@ -32,11 +32,11 @@ const MovieDetailsPage = () => {
 
           {/* TEXTOS */}
           <div className="card_right">
-            <h1>{movie.title}</h1>
+            <h1>{movie?.title}</h1>
 
             {/* <h2>{cores || "2"}</h2> */}
 
-            <p>{movie.overview}</p>
+            <p>{movie?.overview}</p>
             <Link className="card_btn" to="/movie">
               VOLTAR
             </Link>

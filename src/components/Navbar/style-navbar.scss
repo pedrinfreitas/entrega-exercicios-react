@@ -3,12 +3,21 @@
   justify-content: center;
   gap: 1rem;
   width: 100%;
-}
-.navbar a {
-  padding: 0.5rem;
-  line-height: 2rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
-  cursor: pointer;
+  div {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    a {
+      padding: 0.25rem;
+      line-height: 1.5rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #000;
+      cursor: pointer;
+    }
+    small {
+      vertical-align: top;
+      color: #7c7c7c;
+    }
+  }
 }
