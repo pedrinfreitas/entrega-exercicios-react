@@ -21,7 +21,6 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           <Route path="movie/:movieId" element={<MovieDetailsPage />} />
           <Route path="todo" element={<TodoList />} />
           <Route path="playlist" element={<PlaylistPage />} />
-          <Route path="*" element={<MoviePage />} />
         </Route>
       </Routes>
     </BrowserRouter>
